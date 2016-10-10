@@ -1,0 +1,29 @@
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#submit').click(function (){
+	$.ajax({
+		type: 'GET',
+		dataType: 'text',
+		url: 'http://localhost:1337/data',
+		success: function (data){
+			console.log('success', data);
+		}
+});
+return false;
+});
+
+
+</script>
+</head>
+
+<form>
+Nama <input type='text' id='nama' name='nama' /></br>
+Alamat <input type='text' id='mobil' name='mobil' /><br>
+<a id="submit" href="#">kirim dong</a> <br>
+
+<h2>data</h2>
+<ul id="dataInput"></ul>
+<li></li>
+</form>
